@@ -6,6 +6,10 @@ This project implements an **Online Railway Booking System** using a **MySQL dat
 
 ---
 
+## Collaborators
+- **Jorgeluis Done**
+- **Anthony Paulino**
+
 ## Features
 
 ### Customer Features
