@@ -1,0 +1,1886 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Form container styling for login and register */
+.form-container {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-container label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+    color: #555;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-container button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+}
+
+.form-container button:hover {
+    background-color: #45a049;
+}
+
+.form-container .error {
+    color: #d9534f;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+/* General Navbar styling */
+.navbar {
+    background-color: #333;
+    color: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    z-index: 10;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+/* Dashboard container */
+.dashboard-container {
+    margin-top: 100px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 950px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Customer Reservation Container */
+.customer-reservation-container {
+    margin-top: 100px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 800px; /* Adjusted for better table fit */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.customer-reservation-container h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.customer-reservation-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1em; /* Adjusted for better readability */
+}
+
+.customer-reservation-container table th,
+.customer-reservation-container table td {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.customer-reservation-container table th {
+    background-color: #333;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.customer-reservation-container table td {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.customer-reservation-container table tr:nth-child(even) td {
+    background-color: #f3f3f3;
+}
+
+.customer-reservation-container table button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin: 5px; /* Added margin for better spacing */
+}
+
+.customer-reservation-container table button:hover {
+    opacity: 0.9;
+}
+
+.customer-reservation-container table .open-button {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.customer-reservation-container table .open-button:hover {
+    background-color: #45a049;
+}
+
+.customer-reservation-container table .cancel-button {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+.customer-reservation-container table .cancel-button:hover {
+    background-color: #c9302c;
+}
+
+
+.customer-reservation-container button {
+    background-color: #a6bbb3;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.customer-reservation-container button:hover {
+    background-color: #8fa99e;
+}
+
+
+/* View Reservation Container */
+.view-reservation-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 100%; /* Remove max-width constraint */
+    margin: auto;
+    text-align: center;
+}
+
+.reservation-table-wrapper {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.reservation-table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.reservation-table-wrapper th, 
+.reservation-table-wrapper td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.reservation-table-wrapper th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+.reservation-table-wrapper td {
+    background-color: #f9f9f9;
+}
+
+.reservation-table-wrapper tr:nth-child(even) td {
+    background-color: #f3f3f3;
+}
+
+/* Customer Schedule container */
+.customer-schedule-container {
+    margin-top: 100px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Dropdown focus/hover effect */
+.customer-schedule-container select:hover,
+.customer-schedule-container select:focus {
+    border-color: #3498db; /* Change border color on hover/focus */
+    outline: none; /* Remove focus outline */
+}
+
+/* Dropdown container form styling */
+.customer-schedule-container .search-form {
+    display: flex;
+    flex-wrap: wrap; /* Make it responsive */
+    align-items: center; /* Center align items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 15px; /* Spacing between form elements */
+    margin-bottom: 30px; /* Space below the form */
+}
+
+/* Style the label */
+.customer-schedule-container label {
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Style the select dropdowns */
+.customer-schedule-container select {
+    appearance: none; /* Remove default browser styling */
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Text color */
+    padding: 10px 20px; /* Padding for size */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    width: auto; /* Adjust width to content */
+    margin: 0 10px; /* Spacing between inputs */
+    transition: border-color 0.3s ease;
+}
+
+/* Style the submit button */
+.customer-schedule-container button[type="submit"] {
+    background-color: #28a745; /* Green button */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease;
+}
+
+.customer-schedule-container button[type="submit"]:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Add styles for inputs */
+.customer-schedule-container input[type="date"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.customer-schedule-container input[type="date"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+
+/* Style for long navigation buttons in dashboard */
+.long-button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 20px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    max-width: 500px;
+    transition: background-color 0.3s;
+}
+
+.long-button:hover {
+    background-color: #45a049;
+}
+
+/* Modernized styling within the dashboard content */
+.content h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Search results table styling */
+.results table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.results table th, .results table td {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.results table th {
+    background-color: #333;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.results table td {
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.results table tr:nth-child(even) td {
+    background-color: #f3f3f3;
+}
+
+.results h3 {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Button styling for form and open button */
+.search-form button,
+.results table .open-button { /* Styled the Open button similarly to search */
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.search-form button:hover,
+.results table .open-button:hover {
+    background-color: #45a049;
+}
+
+/* Schedule Details Page styling */
+.schedule-details-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.schedule-details-container h2 {
+    color: #333;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.schedule-overview {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.schedule-overview h3 {
+    color: #333;
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.schedule-overview table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.schedule-overview table th,
+.schedule-overview table td {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.schedule-overview table th {
+    background-color: #333;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.schedule-overview table td {
+    color: #333;
+    background-color: #ffffff;
+}
+
+.schedule-overview table tr:nth-child(even) td {
+    background-color: #f3f3f3;
+}
+
+.round-trip-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.round-trip-container label {
+    font-weight: 600;
+    color: #333;
+    margin-right: 10px;
+}
+
+.round-trip-container select {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    min-width: 220px;
+}
+
+.return-schedule-details {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.return-schedule-details h3 {
+    color: #333;
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.return-schedule-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.return-schedule-details table th,
+.return-schedule-details table td {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.return-schedule-details table th {
+    background-color: #333;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.return-schedule-details table td {
+    color: #333;
+    background-color: #ffffff;
+}
+
+.fare-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.fare-label {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Reservation Details Container */
+.reservation-details-container h2 {
+    color: #333;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Table styling for reservation details */
+.reservation-details-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.reservation-details-container table th, 
+.reservation-details-container table td {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.reservation-details-container table th {
+    background-color: #333;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.reservation-details-container table td {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Stripe effect for rows */
+.reservation-details-container table tr:nth-child(even) td {
+    background-color: #f3f3f3;
+}
+
+/* Make Reservation Button */
+.confirm-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.confirm-button:hover {
+    background-color: #45a049;
+}
+
+/* Adjustments for drop down and input fields */
+.reservation-details-container select, 
+.reservation-details-container input[type="number"] {
+    width: 80%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Customer Service Container */
+.customer-service-container {
+    margin-top: 70px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 1200px;
+    transition: all 0.3s ease;
+}
+
+.customer-service-container h2, .post-question-section h4 {
+    color: #333;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Dropdown focus/hover effect */
+.customer-service-container select:hover,
+.customer-service-container select:focus {
+    border-color: #3498db; /* Change border color on hover/focus */
+    outline: none; /* Remove focus outline */
+}
+
+/* Dropdown container form styling */
+.customer-service-container .search-form {
+    display: flex;
+    flex-wrap: wrap; /* Make it responsive */
+    align-items: center; /* Center align items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 15px; /* Spacing between form elements */
+    margin-bottom: 30px; /* Space below the form */
+}
+
+/* Style the select dropdowns */
+.customer-service-container select {
+    appearance: none; /* Remove default browser styling */
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Text color */
+    padding: 10px 20px; /* Padding for size */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    width: auto; /* Adjust width to content */
+    margin: 0 10px; /* Spacing between inputs */
+    transition: border-color 0.3s ease;
+}
+
+/* Style the submit button */
+.customer-service-container button[type="submit"] {
+    background-color: #28a745; /* Green button */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease;
+}
+
+/* Search Form */
+.search-form {
+    margin-bottom: 30px;
+}
+
+.search-form label {
+    font-size: 1em;
+    font-weight: bold;
+    color: #555;
+    margin-right: 10px;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.customer-service-container input[type="text"] {
+    padding: 10px; /* Add padding for better readability */
+    margin-bottom: 15px; /* Add spacing between inputs */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em; /* Increase font size for readability */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.search-form button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #45a049;
+}
+
+/* Questions Section */
+.question-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.question-box p {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.question-box button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.question-box button:hover {
+    background-color: #45a049;
+}
+
+/* Replies Section */
+.replies-container {
+    margin-top: 15px;
+    padding-left: 20px;
+    border-left: 3px solid #ddd;
+}
+
+.reply {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.reply p {
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.reply-date {
+    font-size: 0.8em;
+    color: #777;
+}
+
+/* Reply Form */
+.reply-form {
+    display: none;
+    margin-top: 10px;
+}
+
+.reply-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.reply-form button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.reply-form button:hover {
+    background-color: #45a049;
+}
+
+/* Post Question Section */
+.post-question-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease;
+}
+
+.post-question-section label {
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.post-question-section textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+
+.post-question-section button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-question-section button:hover {
+    background-color: #45a049;
+}
+
+/* Manage Employee Container */
+.manage-employee-container {
+    margin-top: 100px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.manage-employee-container h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.manage-employee-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.manage-employee-container table th,
+.manage-employee-container table td {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.manage-employee-container table th {
+    background-color: #333;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.manage-employee-container table td {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.manage-employee-container table tr:nth-child(even) td {
+    background-color: #f3f3f3;
+}
+
+.manage-employee-container button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.manage-employee-container button:hover {
+    background-color: #45a049;
+}
+
+.manage-employee-container .cancel-button {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+.manage-employee-container .cancel-button:hover {
+    background-color: #c9302c;
+}
+
+/* Text input styling within Manage Employee Container */
+.manage-employee-container input[type="text"],
+.manage-employee-container input[type="password"] {
+    width: 90%; /* Adjust width to fit container */
+    padding: 10px; /* Add padding for better readability */
+    margin-bottom: 15px; /* Add spacing between inputs */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em; /* Increase font size for readability */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+/* Input focus styling */
+.manage-employee-container input[type="text"]:focus,
+.manage-employee-container input[type="password"]:focus {
+    border-color: #4CAF50; /* Highlight border on focus */
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.5); /* Green glow effect */
+    outline: none; /* Remove default focus outline */
+}
+
+/* Label styling */
+.manage-employee-container label {
+    display: block; /* Ensure labels are block elements */
+    margin-bottom: 5px; /* Add space between label and input */
+    font-weight: bold; /* Make labels stand out */
+    color: #333; /* Consistent text color */
+    text-align: left; /* Align labels to the left */
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* View Reservations Container */
+.view-reservations-container {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Dropdown and Button Styling */
+.view-reservations-container select,
+.view-reservations-container button {
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.view-reservations-container select:hover,
+.view-reservations-container button:hover {
+    border-color: #bbb;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.view-reservations-container button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+}
+
+.view-reservations-container button:hover {
+    background-color: #45a049;
+}
+
+/* Table Styling */
+.view-reservations-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.view-reservations-container table th,
+.view-reservations-container table td {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.view-reservations-container table th {
+    background-color: #333;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.view-reservations-container table td {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.view-reservations-container table tr:nth-child(even) td {
+    background-color: #f3f3f3;
+}
+
+.reservation-table-wrapper {
+    overflow-x: auto;
+}
+
+.reservation-table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.reservation-table-wrapper th,
+.reservation-table-wrapper td {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.reservation-table-wrapper th {
+    background-color: #333;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.reservation-table-wrapper td {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.reservation-table-wrapper tr:nth-child(even) td {
+    background-color: #f3f3f3;
+}
+
+.reservation-table-wrapper .group-row {
+    background-color: #e6e6e6;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 20px;
+    color: #333;
+}
+
+/* Sales Report Specific Styles */
+.sales-report-container {
+    margin-top: 70px; /* Ensures spacing from the fixed navbar */
+    width: 95%; /* Responsive width */
+    max-width: 1100px; /* Maximum container width */
+    background: #FFF; /* White background for the content */
+    padding: 20px 40px; /* Padding around the content */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    border-radius: 8px; /* Rounded corners for the container */
+}
+
+.sales-report-container h2 {
+    margin-bottom: 30px; /* Space below the header */
+    color: #333; /* Dark grey color for text */
+    font-size: 24px; /* Larger font size for visibility */
+}
+
+/* Styling for forms in the sales report container */
+.sales-report-container form {
+    margin-bottom: 20px; /* Space below the form */
+    display: flex; /* Flexbox for inline elements */
+    justify-content: center; /* Center form elements horizontally */
+    align-items: center; /* Align form elements vertically */
+    gap: 15px; /* Space between form elements */
+}
+
+.sales-report-container select, .sales-report-container button {
+    padding: 10px; /* Padding inside the select box and button */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded edges for select box and button */
+    background: #f8f8f8; /* Light grey background */
+    cursor: pointer; /* Cursor pointer for clickable items */
+}
+
+.sales-report-container button {
+    background-color: #4CAF50; /* Green background for buttons */
+    color: white; /* White text for buttons */
+    font-weight: bold; /* Bold font for button text */
+}
+
+.sales-report-container button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Styling for the sales data table */
+.sales-report-container table {
+    width: 100%; /* Full width of the container */
+    border-collapse: collapse; /* Collapse borders */
+    margin-top: 20px; /* Margin top for spacing */
+}
+
+.sales-report-container th, .sales-report-container td {
+    text-align: left; /* Align text to the left */
+    padding: 12px 15px; /* Padding inside table cells */
+    border: 1px solid #ddd; /* Light grey border for cells */
+}
+
+.sales-report-container th {
+    background-color: #333; /* Dark background for header */
+    color: white; /* White text for header */
+}
+
+.sales-report-container td {
+    background-color: #fafafa; /* Very light grey for data rows */
+}
+
+.sales-report-container tr:nth-child(even) td {
+    background-color: #f5f5f5; /* Alternating row color */
+}
+
+.sales-report-container .total-row {
+    background-color: #444; /* Darker background for total row */
+    color: black; /* White text for contrast */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+
+/* Most Active Transit Lines Styles */
+.transit-lines-container {
+    margin-top: 80px; /* Provides enough space from the navbar */
+    padding: 20px; /* Padding for aesthetic spacing */
+    background-color: #FFF; /* Clean, white background for focus */
+    border-radius: 10px; /* Smoothed corners for a softer look */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    width: 95%; /* Responsive width */
+    max-width: 900px; /* Max width for better table presentation */
+    text-align: center; /* Center aligns the text for better focus */
+}
+
+.transit-lines-container h2 {
+    margin-bottom: 20px; /* Space below the heading for separation */
+    color: #333; /* Dark color for strong visibility */
+    font-size: 24px; /* Large size for clear readability */
+}
+
+/* Table styles specific to transit lines leaderboard */
+.transit-lines-container table {
+    width: 100%; /* Full width to use available space */
+    border-collapse: collapse; /* Clean look by collapsing borders */
+    margin-top: 10px; /* Space above table to separate from text */
+}
+
+.transit-lines-container th,
+.transit-lines-container td {
+    padding: 12px; /* Comfortable padding inside cells */
+    border: 1px solid #ddd; /* Light grey border for subtle separation */
+    text-align: left; /* Aligns text to the left for consistency */
+}
+
+.transit-lines-container th {
+    background-color: #333; /* Dark background for headers for contrast */
+    color: white; /* White text for readability */
+}
+
+.transit-lines-container td {
+    background-color: #fafafa; /* Light grey background for data cells */
+}
+
+.transit-lines-container tr:nth-child(even) td {
+    background-color: #f0f0f0; /* Alternating row color for easy reading */
+}
+
+/* Adjustments for the navigation back to dashboard */
+.transit-lines-container .navbar {
+    background-color: #333; /* Ensures consistent nav bar color across pages */
+    color: white; /* Maintains legibility */
+    padding: 10px 15px; /* Optimal padding for size and comfort */
+    width: 100%; /* Full width to cover the top */
+    text-align: left; /* Aligns text to the left for traditional readability */
+}
+
+.transit-lines-container .navbar a {
+    color: white; /* Ensures links are visible against the dark background */
+    text-decoration: none; /* Removes underline from links */
+    font-weight: bold; /* Emphasizes the link for importance */
+}
+
+.transit-lines-container .navbar a:hover {
+    background-color: #555; /* Darker on hover for interactive feedback */
+}
+
+
+
+/* Revenue Report Specific Styles */
+.revenue-report-container {
+    margin-top: 70px; /* Consistent top margin with other pages */
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    width: 95%;
+    max-width: 1100px; /* Consistent with the sales report for uniformity */
+    text-align: center;
+}
+
+.revenue-report-container h2 {
+    margin-bottom: 30px; /* Provides spacing under the header */
+    color: #333;
+    font-size: 24px; /* Increases readability */
+}
+
+/* Styling for dropdown forms in the revenue report container */
+.revenue-report-container form {
+    margin-bottom: 20px; /* Provides spacing under the form */
+    display: flex; /* Aligns form items inline */
+    justify-content: center; /* Centers the form items horizontally */
+    gap: 10px; /* Provides spacing between form items */
+}
+
+.revenue-report-container select,
+.revenue-report-container button {
+    padding: 10px; /* Comfortable clicking area */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    background: #f8f8f8; /* Off white background */
+    cursor: pointer; /* Indicates an interactive element */
+}
+
+.revenue-report-container button {
+    background-color: #4CAF50; /* Primary button color */
+    color: white; /* Text color for contrast */
+}
+
+.revenue-report-container button:hover {
+    background-color: #45a049; /* Darker shade on hover */
+}
+
+/* Table styling for revenue report */
+.revenue-report-container table {
+    width: 100%; /* Uses full container width */
+    border-collapse: collapse; /* Removes double borders */
+    margin-top: 20px; /* Spacing above the table */
+}
+
+.revenue-report-container th, 
+.revenue-report-container td {
+    padding: 12px; /* Spacing inside table cells */
+    border: 1px solid #ddd; /* Light grey border for readability */
+    text-align: left; /* Aligns text to the left within cells */
+}
+
+.revenue-report-container th {
+    background-color: #333; /* Dark background for headers */
+    color: white; /* White text for contrast */
+}
+
+.revenue-report-container td {
+    background-color: #fafafa; /* Very light grey for table cells */
+}
+
+.revenue-report-container tr:nth-child(even) td {
+    background-color: #f5f5f5; /* Alternating row color for readability */
+}
+
+.revenue-report-container .total-row {
+    background-color: #444; /* Dark grey for total row */
+    color: white; /* White for contrast */
+    font-weight: bold; /* Emphasizes the total */
+}
+
+
+
+/* Best Customers Leaderboard Specific Styles */
+.customer-leaderboard-container {
+    margin-top: 80px; /* Space from top considering navbar */
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 95%;
+    max-width: 800px; /* Optimized for wider tables */
+    text-align: center;
+    align-self: center; /* Centers the container on the page */
+}
+
+.customer-leaderboard-container h2 {
+    margin-bottom: 20px; /* Spacing under the title */
+    color: #333;
+    font-size: 24px; /* Clear visibility */
+}
+
+/* Form styling for filter dropdown */
+.customer-leaderboard-container .filter-form {
+    margin-bottom: 20px; /* Spacing below the form */
+    display: flex; /* Inline elements */
+    justify-content: center; /* Center align the form items */
+    gap: 10px; /* Spacing between elements */
+}
+
+.customer-leaderboard-container select {
+    padding: 10px; /* Padding for easy interaction */
+    border: 1px solid #ccc; /* Borders for definition */
+    border-radius: 5px; /* Rounded borders */
+    background: #f8f8f8; /* Light background for contrast */
+    cursor: pointer; /* Indicates interactivity */
+}
+
+.customer-leaderboard-container table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Clean table look */
+    margin-top: 10px; /* Space before the table */
+}
+
+.customer-leaderboard-container th, 
+.customer-leaderboard-container td {
+    padding: 12px; /* Adequate padding for content */
+    border: 1px solid #ddd; /* Subtle border styling */
+    text-align: left; /* Aligns content to the left */
+}
+
+.customer-leaderboard-container th {
+    background-color: #333; /* Dark background for headers */
+    color: white; /* Contrast for readability */
+}
+
+.customer-leaderboard-container td {
+    background-color: #fafafa; /* Lighter for content rows */
+}
+
+.customer-leaderboard-container tr:nth-child(even) td {
+    background-color: #f0f0f0; /* Zebra striping for rows */
+}
+
+
+/* Specific styling for the repCustomerReservations page */
+.rep-customer-reservations-container {
+    margin-top: 80px; /* Space from the navbar */
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 1000px; /* Appropriate for table and forms */
+    text-align: center;
+    align-self: center; /* Centers container in the view */
+}
+
+.rep-customer-reservations-container h2 {
+    margin-bottom: 20px; /* Space below the header */
+    color: #333;
+    font-size: 24px; /* Visibility and emphasis */
+}
+
+/* Forms and selection styling in rep customer reservations */
+.rep-customer-reservations-container form {
+    margin-bottom: 20px; /* Space below the form */
+    display: flex;
+    justify-content: center; /* Centering form contents */
+    gap: 10px; /* Space between elements */
+    flex-wrap: wrap; /* Wrap elements in smaller screens */
+}
+
+.rep-customer-reservations-container select,
+.rep-customer-reservations-container input[type="date"],
+.rep-customer-reservations-container button {
+    padding: 8px; /* Padding for better interaction */
+    border: 1px solid #ccc; /* Subtle border for definition */
+    border-radius: 5px; /* Rounded corners for aesthetics */
+    background: #f8f8f8; /* Light background for elements */
+    cursor: pointer; /* Pointer to indicate clickable areas */
+}
+
+.rep-customer-reservations-container button {
+    background-color: #4CAF50; /* Consistent green for actions */
+    color: white; /* Text color for readability */
+    font-weight: bold; /* Bold to denote action */
+}
+
+.rep-customer-reservations-container button:hover {
+    background-color: #45a049; /* Darker green on hover for feedback */
+}
+
+/* Table styling for reservation details */
+.rep-customer-reservations-container table {
+    width: 100%; /* Full width for comprehensive data display */
+    border-collapse: collapse; /* Neat table borders */
+    margin-top: 20px; /* Spacing before table starts */
+}
+
+.rep-customer-reservations-container th, 
+.rep-customer-reservations-container td {
+    padding: 12px; /* Comfortable padding for data */
+    border: 1px solid #ddd; /* Clear definition of cells */
+    text-align: left; /* Data alignment for readability */
+}
+
+.rep-customer-reservations-container th {
+    background-color: #333; /* Header background for distinction */
+    color: white; /* Text color for clarity */
+}
+
+.rep-customer-reservations-container td {
+    background-color: #fafafa; /* Light background for data rows */
+}
+
+.rep-customer-reservations-container tr:nth-child(even) td {
+    background-color: #f0f0f0; /* Alternating row colors for better legibility */
+}
+
+
+/* Toaster Notification Styles */
+        .toaster {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            animation: fadeOut 3s forwards;
+        }
+        .toaster.success {
+            background-color: #28a745;
+        }
+        .toaster.error {
+            background-color: #dc3545;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; }
+}
+
+.manage-schedule-container {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 50px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 1000px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-self: center; /* Centers container in the view */
+}
+
+.manage-schedule-container h2 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.manage-schedule-container h3 {
+    font-size: 20px;
+    color: #555555;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.manage-schedule-container h4 {
+    font-size: 16px;
+    color: #444444;
+    margin-bottom: 10px;
+}
+
+.manage-schedule-container form {
+    margin-bottom: 20px;
+}
+
+.manage-schedule-container form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555555;
+}
+
+.manage-schedule-container form input[type="text"],
+.manage-schedule-container form input[type="number"],
+.manage-schedule-container form select {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.manage-schedule-container form button {
+    background-color: #0073e6;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.manage-schedule-container form button:hover {
+    background-color: #005bb5;
+}
+
+.manage-schedule-container .stops-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.manage-schedule-container .stops-container .stop {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.manage-schedule-container .stop label {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 5px;
+}
+
+.manage-schedule-container .stop input[type="text"],
+.manage-schedule-container .stop select {
+    width: calc(100% - 160px);
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.modify-schedules-container {
+	  max-width: 1000px;
+	  margin: 50px auto;
+	  background: #fff;
+	  padding: 20px;
+	  border-radius: 8px;
+	  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modify-schedules-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.modify-schedules-container form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.modify-schedules-container label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.modify-schedules-container input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.modify-schedules-container button {
+   background-color: #808080;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.modify-schedules-container button:hover {
+    background-color: #686868;
+}
+
+.modify-schedules-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.modify-schedules-container th, td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #ddd;
+    
+}
+
+.modify-schedules-container th {
+    background-color: #808080;
+    color: white;
+}
+
+.modify-schedules-container tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.modify-schedules-container tr:hover {
+    background-color: #f1f1f1;
+}
+
+.modify-schedules-container td form {
+    display: inline;
+}
+
+.modify-schedules-container td button {
+    margin-right: 5px;
+    padding: 5px 10px;
+}
+
+.modify-schedules-container td button:first-of-type {
+    background-color: #28a745;
+}
+
+.modify-schedules-container td button:first-of-type:hover {
+    background-color: #218838;
+}
+
+.modify-schedules-container td button:last-of-type {
+    background-color: #dc3545;
+}
+
+.modify-schedules-container td button:last-of-type:hover {
+    background-color: #c82333;
+}
+
+
+
+
+
+.edit-schedule-container {
+	width: 30%;
+    max-width: 1000px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-schedule-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.edit-schedule-container form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.edit-schedule-container form select,
+.edit-schedule-container form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+.edit-schedule-container form select:focus,
+.edit-schedule-container form input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.edit-schedule-container form button {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.edit-schedule-container form button:hover {
+    background-color: #0056b3;
+}
+
+#stopsContainer {
+    margin-top: 20px;
+}
+
+#stopsContainer h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+#stopsContainer .stop {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#stopsContainer .stop label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#stopsContainer .stop select,
+#stopsContainer .stop input[type="text"] {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#stopsContainer .stop select:focus,
+#stopsContainer .stop input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.edit-employee-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.edit-employee-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.edit-employee-container .form-group {
+    margin-bottom: 15px;
+}
+
+.edit-employee-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.edit-employee-container .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.edit-employee-container .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.edit-employee-container .form-buttons .update-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-employee-container .form-buttons .update-button:hover {
+    background-color: #218838;
+}
+
+.edit-employee-container .form-buttons .back-button {
+    text-decoration: none;
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.edit-employee-container .form-buttons .back-button:hover {
+    background-color: #5a6268;
+}
+
+
+
