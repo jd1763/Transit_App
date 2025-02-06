@@ -4,6 +4,8 @@
 
 This project implements an **Online Railway Booking System** using a **MySQL database**, a **JSP-based web interface**, and **Java with JDBC** for backend connectivity. The system is designed to support operations such as **train schedule browsing**, **reservation management**, and **user interactions for customers, customer representatives, and admin users**. It provides robust data management and user access control.
 
+For a visual representation of the project watch this video attached: [DEMO](https://drive.google.com/file/d/13RjDz6MZJtdsJKhQ3lYS9Wm-TSdW2zn2/view?usp=sharing)
+
 ---
 
 ## Collaborators
